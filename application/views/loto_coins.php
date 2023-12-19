@@ -89,17 +89,38 @@
 
                             ?>
                         
-                    <div class="col w-auto">
-                        <div class="card m-0">
-                            <div class="card-body bg-card-lp px-md-2">
-                                <p class="m-0"><span class="font-secun fnt-24 fw-normal"><?php echo $puntosX;?></span> Loto Coins</p>
-                                <p class="font-ibm fw-normal fnt-14 font-secun mt-n1">Vencen <?php echo $compra->VencimientoPuntos;?></p>
+                            <?php     if ($compra->CouponCost=='0') {   ?>
+                            
+                            <div class="col w-auto">
+                                <div class="card m-0">
+                                    <div class="card-body bg-card-lp px-md-2">
+                                        <p class="m-0"><span class="font-secun fnt-24 fw-normal"><?php echo $puntosX;?></span> Loto Coins</p>
+                                        <p class="font-ibm fw-normal fnt-14 font-secun mt-n1">Vencen <?php echo $compra->VencimientoPuntos;?></p>
 
-                                <p class="mb-0 mt-2"><span class="font-prin fnt-24 fw-normal">$<?php echo $comprassX;?></span> <?php echo $compra->GameTitle;?></p>
-                                <p class="font-ibm fw-normal fnt-14 font-prin mt-n1 mb-0">Compra <?php echo $compra->CouponDate;?></p>
+                                        <p class="mb-0 mt-2"><span class="font-prin fnt-24 fw-normal"><?php echo $compra->GameTitle;?></p>
+                                        <p class="font-ibm fw-normal fnt-14 font-prin mt-n1 mb-0">Otorgado <?php echo $compra->CouponDate;?></p>
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+
+                            <?php  }else{   ?>
+
+                            <div class="col w-auto">
+                                <div class="card m-0">
+                                    <div class="card-body bg-card-lp px-md-2">
+                                        <p class="m-0"><span class="font-secun fnt-24 fw-normal"><?php echo $puntosX;?></span> Loto Coins</p>
+                                        <p class="font-ibm fw-normal fnt-14 font-secun mt-n1">Vencen <?php echo $compra->VencimientoPuntos;?></p>
+
+                                        <p class="mb-0 mt-2"><span class="font-prin fnt-24 fw-normal">$<?php echo $comprassX;?></span> <?php echo $compra->GameTitle;?></p>
+                                        <p class="font-ibm fw-normal fnt-14 font-prin mt-n1 mb-0">Compra <?php echo $compra->CouponDate;?></p>
+                                    </div>
+                                </div>
+                            </div>
+                                        
+                            <?php }?>
+
+
+
                     <?php }?>
             <?php }?>
                   
